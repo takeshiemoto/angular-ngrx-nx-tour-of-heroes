@@ -1,0 +1,22 @@
+{
+  "npmScope": "angular-ngrx-nx-tour-of-heroes",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "tour-of-heroes": {
+      "tags": []
+    },
+    "tour-of-heroes-e2e": {
+      "tags": [],
+      "implicitDependencies": ["tour-of-heroes"]
+    }
+  }
+}

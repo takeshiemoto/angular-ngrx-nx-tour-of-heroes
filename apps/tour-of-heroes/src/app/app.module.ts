@@ -12,7 +12,7 @@ import { RouterModule } from '@angular/router';
       {
         path: '',
         loadChildren: () =>
-          import('../../../../libs/dashboard/src/lib/dashboard.module').then(
+          import('@angular-ngrx-nx-tour-of-heroes/dashboard').then(
             m => m.DashboardModule
           )
       }

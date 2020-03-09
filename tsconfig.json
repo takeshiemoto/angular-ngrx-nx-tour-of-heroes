@@ -15,7 +15,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {},
+    "paths": {
+      "@angular-ngrx-nx-tour-of-heroes/dashboard": [
+        "libs/dashboard/src/index.ts"
+      ]
+    },
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true
   },

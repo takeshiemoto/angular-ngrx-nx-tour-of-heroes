@@ -19,7 +19,8 @@
       "@angular-ngrx-nx-tour-of-heroes/dashboard": [
         "libs/dashboard/src/index.ts"
       ],
-      "@angular-ngrx-nx-tour-of-heroes/heroes": ["libs/heroes/src/index.ts"]
+      "@angular-ngrx-nx-tour-of-heroes/heroes": ["libs/heroes/src/index.ts"],
+      "@angular-ngrx-nx-tour-of-heroes/api": ["libs/api/src/index.ts"]
     },
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true

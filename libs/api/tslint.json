@@ -1,0 +1,17 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "angularNgrxNxTourOfHeroes",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "angular-ngrx-nx-tour-of-heroes",
+      "kebab-case"
+    ]
+  }
+}

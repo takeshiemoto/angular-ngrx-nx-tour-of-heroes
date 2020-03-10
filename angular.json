@@ -155,6 +155,38 @@
           "styleext": "scss"
         }
       }
+    },
+    "heroes": {
+      "projectType": "library",
+      "root": "libs/heroes",
+      "sourceRoot": "libs/heroes/src",
+      "prefix": "angular-ngrx-nx-tour-of-heroes",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/heroes/tsconfig.lib.json",
+              "libs/heroes/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/heroes/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/heroes/jest.config.js",
+            "tsConfig": "libs/heroes/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/heroes/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {

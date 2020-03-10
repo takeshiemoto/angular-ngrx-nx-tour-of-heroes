@@ -15,6 +15,13 @@ import { RouterModule } from '@angular/router';
           import('@angular-ngrx-nx-tour-of-heroes/dashboard').then(
             m => m.DashboardModule
           )
+      },
+      {
+        path: 'heroes',
+        loadChildren: () =>
+          import('@angular-ngrx-nx-tour-of-heroes/heroes').then(
+            m => m.HeroesModule
+          )
       }
     ])
   ],

@@ -156,38 +156,6 @@
         }
       }
     },
-    "heroes": {
-      "projectType": "library",
-      "root": "libs/heroes",
-      "sourceRoot": "libs/heroes/src",
-      "prefix": "angular-ngrx-nx-tour-of-heroes",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/heroes/tsconfig.lib.json",
-              "libs/heroes/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!libs/heroes/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/heroes/jest.config.js",
-            "tsConfig": "libs/heroes/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "libs/heroes/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/angular:component": {
-          "styleext": "scss"
-        }
-      }
-    },
     "api": {
       "projectType": "library",
       "root": "libs/api",
@@ -211,6 +179,70 @@
             "tsConfig": "libs/api/tsconfig.spec.json",
             "passWithNoTests": true,
             "setupFile": "libs/api/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "hero-list": {
+      "projectType": "library",
+      "root": "libs/hero-list",
+      "sourceRoot": "libs/hero-list/src",
+      "prefix": "angular-ngrx-nx-tour-of-heroes",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/hero-list/tsconfig.lib.json",
+              "libs/hero-list/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/hero-list/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/hero-list/jest.config.js",
+            "tsConfig": "libs/hero-list/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/hero-list/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "hero-detail": {
+      "projectType": "library",
+      "root": "libs/hero-detail",
+      "sourceRoot": "libs/hero-detail/src",
+      "prefix": "angular-ngrx-nx-tour-of-heroes",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/hero-detail/tsconfig.lib.json",
+              "libs/hero-detail/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/hero-detail/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/hero-detail/jest.config.js",
+            "tsConfig": "libs/hero-detail/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/hero-detail/src/test-setup.ts"
           }
         }
       },

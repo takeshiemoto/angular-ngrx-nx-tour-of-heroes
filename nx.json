@@ -21,10 +21,13 @@
     "dashboard": {
       "tags": []
     },
-    "heroes": {
+    "api": {
       "tags": []
     },
-    "api": {
+    "hero-list": {
+      "tags": []
+    },
+    "hero-detail": {
       "tags": []
     }
   }

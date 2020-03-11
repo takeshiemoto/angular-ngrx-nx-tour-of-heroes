@@ -22,10 +22,17 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
           )
       },
       {
-        path: 'heroes',
+        path: 'hero-list',
         loadChildren: () =>
-          import('@angular-ngrx-nx-tour-of-heroes/heroes').then(
-            m => m.HeroesModule
+          import('@angular-ngrx-nx-tour-of-heroes/hero-list').then(
+            m => m.HeroListModule
+          )
+      },
+      {
+        path: 'hero-list/:id',
+        loadChildren: () =>
+          import('@angular-ngrx-nx-tour-of-heroes/hero-detail').then(
+            m => m.HeroDetailModule
           )
       }
     ]),

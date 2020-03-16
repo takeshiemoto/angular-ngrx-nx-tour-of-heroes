@@ -16,6 +16,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@env/*": ["apps/tour-of-heroes/src/environments/*"],
       "@angular-ngrx-nx-tour-of-heroes/dashboard": [
         "libs/dashboard/src/index.ts"
       ],

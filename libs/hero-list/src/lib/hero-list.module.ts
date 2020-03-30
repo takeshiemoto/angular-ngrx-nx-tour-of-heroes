@@ -7,6 +7,7 @@ import * as fromHeroList from './+state/hero-list.reducer';
 import { HeroListEffects } from './+state/hero-list.effects';
 import { HeroListFacade } from './+state/hero-list.facade';
 import { HeroListComponent } from './cotainers/hero-list/hero-list.component';
+import { HeroListService } from './hero-list.service';
 
 export const heroListRoutes: Route[] = [
   {
@@ -25,7 +26,7 @@ export const heroListRoutes: Route[] = [
     ),
     EffectsModule.forFeature([HeroListEffects])
   ],
-  providers: [HeroListFacade],
+  providers: [HeroListFacade, HeroListService],
   declarations: [HeroListComponent]
 })
 export class HeroListModule {}

@@ -2,11 +2,11 @@ import { createReducer, on, Action } from '@ngrx/store';
 import { EntityState, EntityAdapter, createEntityAdapter } from '@ngrx/entity';
 
 import * as HeroListActions from './hero-list.actions';
-import { HeroListEntity } from './hero-list.models';
+import { Hero } from '@angular-ngrx-nx-tour-of-heroes/api';
 
 export const HEROLIST_FEATURE_KEY = 'heroList';
 
-export interface State extends EntityState<HeroListEntity> {
+export interface State extends EntityState<Hero> {
   selectedId?: string | number; // which HeroList record has been selected
   loaded: boolean; // has the HeroList list been loaded
   error?: string | null; // last none error (if any)
@@ -16,9 +16,7 @@ export interface HeroListPartialState {
   readonly [HEROLIST_FEATURE_KEY]: State;
 }
 
-export const heroListAdapter: EntityAdapter<
-  HeroListEntity
-> = createEntityAdapter<HeroListEntity>();
+export const heroListAdapter: EntityAdapter<Hero> = createEntityAdapter<Hero>();
 
 export const initialState: State = heroListAdapter.getInitialState({
   // set initial required properties

@@ -4,6 +4,8 @@ import { fetch } from '@nrwl/angular';
 
 import * as fromHeroList from './hero-list.reducer';
 import * as HeroListActions from './hero-list.actions';
+import { HeroListService } from '../hero-list.service';
+import { map } from 'rxjs/operators';
 
 @Injectable()
 export class HeroListEffects {
@@ -13,9 +15,12 @@ export class HeroListEffects {
       fetch({
         run: action => {
           // Your custom service 'load' logic goes here. For now just return a success action...
-          return HeroListActions.loadHeroListSuccess({ heroList: [] });
+          return this.heroListService
+            .getHeroes()
+            .pipe(
+              map(heroList => HeroListActions.loadHeroListSuccess({ heroList }))
+            );
         },
-
         onError: (action, error) => {
           console.error('Error', error);
           return HeroListActions.loadHeroListFailure({ error });
@@ -24,5 +29,8 @@ export class HeroListEffects {
     )
   );
 
-  constructor(private actions$: Actions) {}
+  constructor(
+    private actions$: Actions,
+    private heroListService: HeroListService
+  ) {}
 }

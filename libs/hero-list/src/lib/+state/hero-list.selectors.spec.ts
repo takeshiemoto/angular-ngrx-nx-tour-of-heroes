@@ -1,15 +1,14 @@
-import { HeroListEntity } from './hero-list.models';
 import { State, heroListAdapter, initialState } from './hero-list.reducer';
 import * as HeroListSelectors from './hero-list.selectors';
+import { Hero } from '@angular-ngrx-nx-tour-of-heroes/api';
 
 describe('HeroList Selectors', () => {
   const ERROR_MSG = 'No Error Available';
   const getHeroListId = it => it['id'];
-  const createHeroListEntity = (id: string, name = '') =>
-    ({
-      id,
-      name: name || `name-${id}`
-    } as HeroListEntity);
+  const createHeroListEntity = (id: string, name = '') => ({
+    id,
+    name: name || `name-${id}`
+  });
 
   let state;
 
